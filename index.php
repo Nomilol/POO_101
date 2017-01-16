@@ -17,9 +17,19 @@ class StrUtils {
 		$this -> _str = '<em>' . $this -> _str . '</em>';
 		return $this -> _str;
 	}
+	public function underline(){
+		$this -> _str = '<u>' . $this -> _str . '</u>';
+		return $this -> _str;
+	}
+	public function capitalize(){
+		$this -> _str = ucfirst($this -> _str);
+		return $this -> _str;
+	}
 }
 
-$maPhrase = new StrUtils("J'aime Michèle");
+$maPhrase = new StrUtils("j'aime Michèle");
 echo $maPhrase -> toString();
 //echo $maPhrase -> bold();
-echo $maPhrase -> italic();
+//echo $maPhrase -> italic();
+//echo $maPhrase -> underline();
+echo $maPhrase -> capitalize();
