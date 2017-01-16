@@ -25,11 +25,18 @@ class StrUtils {
 		$this -> _str = ucfirst($this -> _str);
 		return $this -> _str;
 	}
+	public function uglify(){
+		$this -> capitalize();
+		$this -> bold();
+		$this -> italic();
+		$this -> underline();
+	}
 }
 
 $maPhrase = new StrUtils("j'aime Michèle");
-echo $maPhrase -> toString();
-//echo $maPhrase -> bold();
+// echo $maPhrase -> bold();
 //echo $maPhrase -> italic();
 //echo $maPhrase -> underline();
-echo $maPhrase -> capitalize();
+//echo $maPhrase -> capitalize();
+echo $maPhrase -> uglify();
+echo $maPhrase -> toString();
